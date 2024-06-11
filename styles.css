@@ -1,0 +1,71 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.game {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-color: #222;
+}
+
+.paddle {
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    background-color: #fff;
+}
+
+#leftPaddle {
+    left: 10px;
+    top: 150px;
+}
+
+#rightPaddle {
+    right: 10px;
+    top: 150px;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    left: 390px;
+    top: 190px;
+}
+
+.P1_Score {
+    height: 50px;
+    width: 50px;
+    color: chartreuse;
+    position: fixed;
+    left: 30vw;
+    margin-top: 30px;
+  }
+  
+  .P2_Score {
+    height: 50px;
+    width: 50px;
+    color: chartreuse;
+    position: fixed;
+    left: 70vw;
+    margin-top: 30px;
+  }
+  
+  .Message {
+    position: fixed;
+    height: 10vh;
+    width: 30vw;
+    color: #f5f5f5;
+    left: 38vw;
+    margin: 30px auto auto auto;
+  }
