@@ -9,23 +9,23 @@ const rightPaddle = document.getElementById('rightPaddle');
 let leftPaddleY = 150;
 let rightPaddleY = 150;
 
-let P1_Score=document.querySelector(".P1_Score");
-let P2_Score=document.querySelector(".P2_Score");
+let P1_Score = document.querySelector(".P1_Score");
+let P2_Score = document.querySelector(".P2_Score");
 let Message = document.querySelector('.Message');
 
 const scoreDisplayP1 = document.querySelector('.P1_Score');
 const scoreDisplayP2 = document.querySelector('.P2_Score');
 const messageDisplay = document.querySelector('.Message');
 
-let P1=0;
-let P2=0;
-let gameStarted=false;
-const winningScore=10;
+let P1 = 0;
+let P2 = 0;
+let gameStarted = false;
+const winningScore = 10;
 
 document.addEventListener('keydown',function(event){
-    if(!gameStarted && event.key==='Enter'){
-        gameStarted=true;
-        Message.style.display='none';
+    if(!gameStarted && event.key === 'Enter'){
+        gameStarted = true;
+        Message.style.display = 'none';
         update();
     }
     if(gameStarted){
@@ -57,13 +57,13 @@ function update() {
     } 
     if (ballX >= 800) {
         P1++;
-        P1_Score.textContent=P1;
+        P1_Score.textContent = P1;
         checkGameOver();
         resetBall();
     }
     else if(ballX <= 0) {
         P2++;
-        P2_Score.textContent=P2;
+        P2_Score.textContent = P2;
         checkGameOver();
         resetBall();
     }
@@ -78,10 +78,10 @@ function update() {
 }
 
 function resetBall(){
-    ballX=390;
-    ballY=290;
-    ballSpeedX=-ballSpeedX;
-    ballSpeedY=2;
+    ballX = 390;
+    ballY = 290;
+    ballSpeedX = -ballSpeedX;
+    ballSpeedY = 2;
 }
 
 function checkGameOver(){
